@@ -1,0 +1,40 @@
+/* pages/myArticle/myArticle.wxss */
+/* myArticle css */
+page{
+  width: 100%;
+  height: 100%;
+}
+/* 滚动试图列表 */
+.scrollView{
+  width: 100%;
+  height: 100%; 
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+/* 列表视图 */
+.listView{
+  width: calc(100% + 150rpx);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  margin-top: 10rpx;
+  transition: transform 0.3s;
+}
+.listView .itemView{
+  width: calc(100% - 150rpx); 
+  height: 180rpx;
+  padding: 10rpx 15rpx;
+  background: #FAFAFA; 
+  display: flex;
+  position: relative;
+  z-index: 99;
+}
+/* 滑动删除块 */
+.listView .remove{
+  height: 200rpx;
+  width: 150rpx; 
+  text-align: center;
+  line-height: 200rpx;  
+  color: #FFFFFF;
+  background: #FF1744;
+}

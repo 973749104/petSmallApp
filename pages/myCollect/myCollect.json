@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "scrollView": "/component/scrollView/scrollView"
+  }
+}

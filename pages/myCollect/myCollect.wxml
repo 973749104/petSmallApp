@@ -1,0 +1,11 @@
+<!-- 滚动视图列表 -->
+<view class='scrollView'>
+  <!-- scrollView组件 -->
+  <scrollView
+    sourceData="{{ listData }}"
+    key="tid"
+    bind:onConfirm="delCollect"
+    bind:onCancel="cancel"
+    bind:onClick="click"
+  ></scrollView>
+</view>

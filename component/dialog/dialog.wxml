@@ -1,0 +1,4 @@
+  <!-- 授权弹层 -->
+  <view class="mask" hidden="{{ !isShow }}">
+    获取授权
+  </view>

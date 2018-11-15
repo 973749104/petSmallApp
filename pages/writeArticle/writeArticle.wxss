@@ -1,0 +1,60 @@
+/* pages/writeArticle/writeArticle.wxss */
+page{
+  width: 100%;
+  background: #F5F5F5;
+}
+/* 操作按钮 */
+/* 居于底部 */
+.actBtn{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFFFFF;
+  position: fixed;
+  bottom: 0;
+}
+.actBtn .button{
+  width: 120rpx;
+  height: 80rpx;
+  word-spacing: 5rpx;
+  letter-spacing: 5rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 28rpx;
+  background: #FFFFFF;
+}
+/* form表单 */
+.titleInput{
+  margin: 15rpx 0;
+  padding: 10rpx 5rpx;
+  background: #FFFFFF;
+}
+.textArea{
+  width: 100%;
+  height: 600rpx;
+  background: #FFFFFF;
+}
+/* placeholde样式 */
+.placeholdeClass{
+  font-size: 28rpx;
+  margin: 0 10rpx;
+}
+/* 上传图片区域 */
+.uploadView{
+  background: #FFFFFF;
+  padding: 10rpx;
+}
+/* 上传图片按钮 */
+.uploadView .uploadAct{
+  width: 180rpx;
+  height: 180rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FAFAFA;
+}
+.uploadView .uploadAct image{
+  width: 60%;
+  height: 50%;
+}

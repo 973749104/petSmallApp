@@ -1,0 +1,29 @@
+<!-- 首页显示信息 -->
+<!-- 热门/最新 -->
+<view class="title">
+  <view data-item='hot' bindtap='clickChangeSwiper' class="{{currentItem == 'hot' ? 'select-title' : ''}}" >热门</view>
+  <text>/</text>
+  <view data-item='new' bindtap='clickChangeSwiper' class="{{currentItem == 'new' ? 'select-title' : ''}}">最新</view>
+</view>
+<swiper bindchange='swiperChange' class='home-swiper' current-item-id='{{currentItem}}'>
+ <!-- 热门item -->
+  <swiper-item item-id="hot">
+  <!-- 滚动视图 -->
+    <scroll-view class='scrollView' scroll-y>
+      <!-- 循环打印模板 -->
+      <view wx:for="{{ listDataHot }}" bindtap='itemOnClick' data-id="{{item.id}}" class='itemView' wx:key="{{index}}">
+        <template is="scrollViewList" data="{{ item }}" />
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <!-- 最新item -->
+  <swiper-item item-id="new">
+    <!-- 滚动视图 -->
+    <scroll-view class='scrollView' scroll-y>
+      <!-- 循环打印模板 -->
+      <view wx:for="{{ listDataHot }}" bindtap='itemOnClick' data-id="{{item.id}}" class='itemView' wx:key="{{index}}">
+        <template is="scrollViewList" data="{{ item }}" />
+      </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>

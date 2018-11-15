@@ -1,0 +1,78 @@
+/* 文字部分 */
+.itemViewContent{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: 25rpx;
+}
+.itemViewContent .contentTitle{
+  /* width: 100%; */
+  font-size: 32rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin: 0 10rpx;
+  /* 超出隐藏 */
+  word-wrap:break-word;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.itemViewContent .contentIntroduction{
+  flex: 1;
+  height: 100%;
+  text-indent: 10rpx;
+  margin: 15rpx;
+  /* 超出换行并显示省略号 */
+  word-wrap:break-word;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+/* 图片部分 */
+.itemViewImg{
+  width: 180rpx;
+  height: 180rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.itemViewImg image{
+  width: 175rpx;
+  height: 175rpx;
+}
+/* 滚动试图列表 */
+.scrollView{
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+/* 列表视图 */
+.listView{
+  width: calc(100% + 150rpx);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  margin-top: 10rpx;
+  transition: transform 0.3s;
+}
+.listView .itemView{
+  width: calc(100% - 150rpx);
+  height: 180rpx;
+  padding: 10rpx 15rpx;
+  background: #FAFAFA;
+  display: flex;
+  position: relative;
+  z-index: 99;
+}
+/* 滑动删除块 */
+.listView .remove{
+  height: 200rpx;
+  width: 150rpx;
+  text-align: center;
+  line-height: 200rpx;
+  color: #FFFFFF;
+  background: #FF1744;
+}

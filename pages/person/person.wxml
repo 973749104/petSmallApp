@@ -1,0 +1,65 @@
+<!-- 个人中心 -->
+<!-- 顶部头像账户信息（直接拉取微信信息） 登陆显示-->
+<view class='avatarInfo' wx:if="{{userInfo !== null}}">
+  <!-- 用户名称账号信息 -->
+  <view class='userInfo'>
+    <text class='userName'>{{userInfo.nickName}}</text>
+    <text class='userLevel'>{{userInfo.country}} - {{userInfo.province}}</text>
+  </view>
+  <!-- 头像 -->
+  <view class='avatar'>
+    <image src='{{userInfo.avatarUrl}}'></image>
+  </view>
+</view>
+<!-- 未登录显示 -->
+<button class='avatarInfo' hover-class="none" bindgetuserinfo="login" open-type="getUserInfo" wx:else>
+  <!-- 用户名称账号信息 -->
+  <view class='userInfo'>
+    <text class='userName nologin-userName'>点击头像登陆</text>
+  </view>
+  <!-- 头像 -->
+  <view class='avatar'>
+    <image src='http://img1.imgtn.bdimg.com/it/u=3283541111,3658781412&fm=26&gp=0.jpg'></image>
+  </view>
+</button>
+<!-- 间隔颜文字 -->
+<view class='kaomoji' bindlongpress='easterEgg'>
+  ฅ^•ﻌ•^ฅ ʕ•̫͡•ོʔ•̫͡•ཻʕ•̫͡•ʔ•͓͡•ʔ εïз · ᴥ ·
+</view>
+<!-- 功能区 -->
+<view class='features'>
+  <!-- 功能选项 -->
+  <!-- 写文章 -->
+  <view class='featuresItem' data-page="writeArticle" bindtap='jumpPage'>
+    <!-- 图标 -->
+    <image src='../../assets/iconFont/write.png'></image>
+    写文章
+  </view>
+  <!-- 我的文章 -->
+  <view class='featuresItem' data-page="myArticle" bindtap='jumpPage'>
+    <!-- 图标 -->
+    <image src='../../assets/iconFont/myWorks.png'></image>
+    我的文章
+  </view>
+  <!-- 收藏的文章 -->
+  <view class='featuresItem' data-page="myCollect" bindtap='jumpPage'>
+    <!-- 图标 -->
+    <image src='../../assets/iconFont/collect.png'></image>
+    我的收藏
+  </view>
+  <!-- 关注的作者 -->
+  <view class='featuresItem' data-page="myAttention" bindtap='jumpPage'>
+    <!-- 图标 -->
+    <image src='../../assets/iconFont/attention.png'></image>
+    我的关注
+  </view>
+  <!-- 修改个人资料 -->
+  <view class='featuresItem' data-page="editInfo" bindtap='jumpPage'>
+    <!-- 图标 -->
+    <image src='../../assets/iconFont/person.png'></image>
+    修改资料
+  </view>
+</view>
+<!-- 退出按钮 -->
+<button class='loginOut' bindtap='loginOut' wx:if="{{userInfo !== null}}">退出登录</button>
+<button class='loginOut'  bindgetuserinfo="login" open-type="getUserInfo" wx:else>点击登录</button>

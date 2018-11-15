@@ -1,0 +1,27 @@
+<!-- scrollView模板 -->
+<view class="scrollViewList" wx:if="{{ listData.length > 0 }}">
+  <!-- 循环打印列表 -->
+  <view wx:for="{{ listData }}" wx:key="{{index}}" class='listView' style='transform: translateX({{item.translateX}}rpx)' >
+    <!-- 内容 -->
+    <view class='itemView'  data-index='{{index}}' data-keyValue="{{item[key]}}" catch:touchstart='_onTouchStart' catch:touchmove='_onTouchMove' catch:touchend='_onTouchEnd'>
+      <!-- 文字部分 -->
+      <view class='itemViewContent'>
+        <!-- 标题 -->
+        <view class='contentTitle'>{{ item.title ? item.title : "无数据" }}</view>
+        <!-- 内容简介 -->
+        <view class='contentIntroduction'>{{ item.content }}</view>
+      </view>
+      <!-- 图片部分 -->
+      <view class='itemViewImg'>
+        <image src='{{item.imgUrl}}'></image>
+      </view>
+    </view>
+    <!-- 增加滑动删除 -->
+    <view class='remove' data-keyValue="{{item[key]}}" data-index="{{index}}" catch:tap='_clickRemove'>
+      删除
+    </view>
+  </view>
+</view>
+<view wx:else>
+    11111
+</view>

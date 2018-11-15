@@ -1,0 +1,31 @@
+<!-- 写文章 -->
+<!-- 操作按钮 -->
+ <view class='actBtn'>
+  <view class='button' bindtap='back'>取消</view>
+  <view class='button'>保存</view>
+</view> 
+<!-- 小标题 -->
+<form>
+  <input 
+    bindinput='bindTitleI nput'
+    class='titleInput'
+    placeholder='标题'
+    value='{{title}}'
+    placeholder-class='placeholdeClass' 
+    maxlength='60'>
+  </input>
+  <textarea
+    class='textArea'
+    placeholder-class='placeholdeClass' 
+    placeholder='分享的内容'
+    maxlength='500'
+  >
+  </textarea>
+</form>
+<!-- 上传图片并预览 -->
+<view class='uploadView'>
+  <!-- 上传按钮 -->
+  <view class='uploadAct' bindtap='uploadImg'>
+    <image src='../../assets/other/uploadImgIcon.png'></image>
+  </view>
+</view>

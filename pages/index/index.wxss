@@ -1,0 +1,54 @@
+/**index.wxss**/
+page{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+view, swiper{
+  margin: 0;
+  padding: 0;
+}
+/* 标题样式 */
+.title{
+  padding: 10rpx 30rpx;
+  font-size: 30rpx;
+  color: #555555;
+  background: #E0F7FA;
+  display: flex;
+  align-items: center;
+  /* height: 50rpx; */
+}
+/* 选中的标题样式 */
+.select-title{
+  /* transition:  all 0.2s;  */
+  font-size: 45rpx;
+  color: #000000;
+}
+/* 滑动容器 */
+.home-swiper{
+  flex: 1;
+}
+/* 滚动容器 */
+.scrollView{
+  width: 100%;
+  height: 100%;
+}
+/* 列表视图 */
+.itemView{
+  height: 180rpx;
+  padding: 10rpx 15rpx;
+  background: #FAFAFA; 
+  margin-top: 10rpx;
+  display: flex;
+}
+/* .itemView:nth-child(2n){
+  background: rgba(204, 255, 144, .2); 
+} */
+
+#dialog{
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+  height: 100vh;
+}

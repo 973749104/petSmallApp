@@ -1,0 +1,15 @@
+<!--pages/myArticle/myArticle.wxml-->
+<!-- 滚动视图列表 -->
+<view class='scrollView'>
+  <!-- 循环打印模板 -->
+  <view wx:for="{{ listData }}" wx:key="{{index}}" class='listView' style='transform: translateX({{item.translateX}}rpx)'>
+    <!-- 模板 -->
+    <view class='itemView' data-index='{{index}}' data-id="{{item.id}}" catch:touchstart='onTouchStart' catch:touchmove='onTouchMove' catch:touchend='onTouchEnd'>
+      <template is="scrollViewList" data="{{ item }}" />
+    </view>
+    <!-- 增加滑动删除 -->
+    <view class='remove' data-id="{{item.id}}" catch:tap='clickRemove'>
+      删除
+    </view>
+  </view>
+</view>

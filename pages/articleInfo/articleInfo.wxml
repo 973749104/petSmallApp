@@ -1,0 +1,20 @@
+<!-- 文章详情 -->
+<view class='articleHead'>
+<!-- 文章标题 -->
+  <text class='articleTitle'>{{ articleInfo.title }}</text>
+  <!-- 作者信息 -->
+  <text class='authorInfo'>作者: {{ articleInfo.author }}</text>
+</view>
+<!-- 文章主要内容 -->
+<view class='content'>
+  <rich-text nodes="{{ articleInfo.content }}">
+  </rich-text>
+</view>
+<!-- 关注按钮 -->
+<view class='attection' bindtap='clickAttection'>
+  <image src='{{ userInfo.isAttection ? "../../assets/iconFont/attention.png" : "../../assets/iconFont/attectionNormal.png"}}'></image>
+</view>
+<!-- 收藏按钮 -->
+<view class='collect' bindtap='clickCollect'>
+  <image src='{{ userInfo.isCollect ? "../../assets/iconFont/collect.png" : "../../assets/iconFont/collectNormal.png"}}'></image>
+</view>
